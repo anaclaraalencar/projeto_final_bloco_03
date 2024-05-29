@@ -1,6 +1,6 @@
-import Categoria from "../categoria/Categoria";
+import Categoria from "./Categoria";
 
-export default interface Produto{
+export default interface Produto {
     id: number;
     nome: string;
     preco: number;

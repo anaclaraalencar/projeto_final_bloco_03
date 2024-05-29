@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react"
+import {useEffect, useState } from "react"
 import { RotatingLines } from "react-loader-spinner"
 import { useNavigate, useParams } from "react-router-dom"
-import Categoria from "../../../model/categoria/Categoria"
-import { listar, deletar } from "../../../services/Service"
+import Categoria from "../../../model/Categoria"
+import { deletar, listar } from "../../../services/Service"
 
 
 function DeletarCategoria() {
@@ -18,7 +18,7 @@ function DeletarCategoria() {
         try {
             await listar(`/categorias/${id}`, setCategoria)
         } catch (error: any) {
-            alert('Categoria não encontrado!')
+            alert('Tema não encontrado!')
         }
     }
 
@@ -45,7 +45,7 @@ function DeletarCategoria() {
     }
 
     function retornar() {
-        navigate("/categoria")
+        navigate("/categorias")
     }
 
     return (

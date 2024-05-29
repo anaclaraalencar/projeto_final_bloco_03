@@ -1,9 +1,8 @@
-﻿import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { RotatingLines } from "react-loader-spinner";
 import { useNavigate, useParams } from "react-router-dom";
-import Categoria from "../../../model/categoria/Categoria";
+import Categoria from "../../../model/Categoria";
 import { listar, atualizar, cadastrar } from "../../../services/Service";
-
 
 function FormCategoria() {
 
@@ -52,13 +51,11 @@ function FormCategoria() {
 
     } else {
       try {
-        console.log(categoria)
         await cadastrar(`/categorias`, categoria, setCategoria)
 
         alert('Categoria cadastrada com sucesso')
 
       } catch (error: any) {
-        console.log(error)
         alert('Erro ao cadastrar a Categoria')
       }
     }
@@ -69,7 +66,7 @@ function FormCategoria() {
   }
 
   function retornar() {
-    navigate("/categoria")
+    navigate("/categorias")
   }
 
   return (
