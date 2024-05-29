@@ -25,9 +25,9 @@ function Home() {
                             text-5xl 
                             font-bold
                             '>
-                            Seja bem vindo!
+                            Seja bem-vindo à Drogaria Bom Preço!
                         </h2>
-                        <p className='text-xl'>FarmaPonto é lugar de comprar medicamentos e cosméticos baratos!</p>
+                        <p className='text-xl'>A drogaria com o melhor precinho pro seu bolso!</p>
 
                         
                     </div>
